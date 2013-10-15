@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>index</title>
+		<meta name="author" content="Sergey Zaretsky" />
+		<!-- Date: 2012-03-25 -->
+		<script type="text/javascript"  src="js/caat.js"></script>
+		<script type="text/javascript"  src="js/vt.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// create a director object
+			/*
+			 TODO discover
+			 */ 
+			var director = new CAAT.Director().initialize(
+        		100,    // 100 pixels wide
+        		100,    // 100 pixels across
+        		document.getElementById('_c1')
+			);
+			// add a scene object to the director.
+			var scene=     director.createScene();
+			// create a CAAT actor
+			var circle =    new CAAT.ShapeActor().
+			        setLocation(20,20).
+			        setSize(60,60).
+			        setFillStyle('#ff0000').
+			        setStrokeStyle('#000000');
+			 
+			// add it to the scene
+			circle.mouseEnter = function( mouseEvent ){
+				this.setFillStyle("#aa0000");
+			}
+			
+			circle.mouseExit = function( mouseEvent ){
+				this.setFillStyle("#ff0000");
+			}
+			
+			circle.mouseDrag = function( mouseEvent ){
+				this.setLocation(mouseEvent.x, mouseEvent.y);
+			}
+			
+			scene.addChild(circle);
+					 
+			// start the animation loop
+			CAAT.loop(1);			
+			
+			function drawarm(x,y,angle){
+				
+			}
+		</script>
+	
+	</body>
+</html>
