@@ -21,7 +21,7 @@
         		document.getElementById('_c1')
 			);
 			// add a scene object to the director.
-			var scene=     director.createScene();
+			var scene =     director.createScene();
 			// create a CAAT actor
 			var circle =    new CAAT.ShapeActor().
 			        setLocation(20,20).
@@ -32,24 +32,21 @@
 			// add it to the scene
 			circle.mouseEnter = function( mouseEvent ){
 				this.setFillStyle("#aa0000");
-			}
+			};
 			
 			circle.mouseExit = function( mouseEvent ){
 				this.setFillStyle("#ff0000");
-			}
+			};
 			
 			circle.mouseDrag = function( mouseEvent ){
 				this.setLocation(mouseEvent.x, mouseEvent.y);
-			}
+			};
 			
 			scene.addChild(circle);
 					 
 			// start the animation loop
 			CAAT.loop(1);			
 			
-			function drawarm(x,y,angle){
-				
-			}
 		</script>
 	
 	</body>
