@@ -1,6 +1,7 @@
 // Actors are actors connected by joints and rods. Actors have abilities, default state and a formal grammar of states. 
 // Ability is a subset of states
-
+//links http://perfectionkills.com/exploring-canvas-drawing-techniques/
+//links for SVG http://oak.is/thinking/animated-svgs/
 // base class for vt sysytem
 // 1. There are 2 modes in the whole system: edit and show. 
 //    Submodes for edit mode: - edit actor ( actions to be handled: load actor, save actor, add or remove rods and joints, scale, rotate )
